@@ -1,0 +1,21 @@
+Currently, we're focusing on aggregating data of the total production potential capacity (t/ha) of crops,
+which requires minimally the following steps:
+A) Accessing the database from the website (http://www.gaez.iiasa.ac.at/)
+B) Toggle the following inputs:
+'Suitability and Potential Yield' --> 'Agro-ecological suitability and productivity'
+--> 'Total production capacity (t/ha)
+'Crop'.
+'Water Supply'
+'Input Level'
+'Time Period' --> Baseline (1961-1990)
+'Geographic Areas' [For now, simply select one country]
+C1) Download ascii data and save as excel or csv in predetermined directory
+C2) If the selected combinations from part B) yields no data, return error message (e.g. 'Data not found')
+
+# Import library
+import requests
+
+# Define url, username, and password
+url = 'http://www.gaez.iiasa.ac.at/w/ctrl?_flow=Vwr&_view=Welcome&fieldmain=main_lr_lco_cult&idPS=0&idAS=0&idFS=0'
+user, password = 'chakwong1234@gmail.com', 'Password'
+resp = requests.get(url, auth=(user, password))
