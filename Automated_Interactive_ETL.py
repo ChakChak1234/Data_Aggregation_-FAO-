@@ -4,7 +4,6 @@ import zipfile
 import pandas as pd
 import time
 
-
 #directories
 link = 'http://www.gaez.iiasa.ac.at/w/ctrl?_flow=Vwr&_view=Welcome&idAS=0&idFS=0&fieldmain=main_&idPS=0'
 
