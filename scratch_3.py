@@ -59,6 +59,8 @@ geographic_area = input('\n\nSelect a geographic area: Caribbean, Central Americ
                         'Northern Africa, Western Asia, Southern Asia, Eastern Asia, Central Asia')
 country = input('\n\n\Select a country: %s' % ",".join(continents_countries[geographic_area]))
 
+data_check = driver.find_element_by_xpath('//img[@src="images/ews/w.png"]')
+
 to_loop = itertools.product(AgroEcological_Suitability_and_Productivity_List, Crop_List, Water_Supply_List, Input_Level_List)
 
 for i in to_loop:
