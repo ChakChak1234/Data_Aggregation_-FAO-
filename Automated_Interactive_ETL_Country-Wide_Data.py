@@ -1,5 +1,6 @@
 import os
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 import zipfile
 import pandas as pd
 import time
@@ -19,8 +20,52 @@ driver.get(link)
 
 # Please provide username and password
 username = input('\n\nPlease provide username')
-
 password = input('\n\nPlease provide password')
+
+## Get `No data` selenium.driver object for later use
+# Enter username and password
+driver.find_element_by_name('_username').send_keys(username)
+driver.find_element_by_name('_password').send_keys(password)
+driver.find_element_by_id('buttonSubmit__login').click()
+# Click on Suitability and Potential Yield link
+driver.find_element_by_name('_targetfieldmain=main_py&_passChanged=true&_eventtype').click()
+# Click on Agro-ecological suitability and productivity link
+driver.find_element_by_name('&fieldmain=main_py&idPS=0&idAS=0&idFS=0&_targetfieldmain=main_py_six&_passChanged=true&_eventtype').click()
+# Click on Agro-ecological suitability and productivity list
+driver.find_element_by_css_selector('input[value="{}"]'.format("Crop suitability index (value)")).click()
+driver.find_element_by_css_selector("input.linksubmit[value=\"▸ Crop\"]").click()
+driver.find_element_by_css_selector('input[value="{}"]'.format("Wheat")).click()
+driver.find_element_by_css_selector("input.linksubmit[value=\"▸ Water Supply\"]").click()
+driver.find_element_by_css_selector('input[value="{}"]'.format("Irrigation")).click()
+driver.find_element_by_css_selector("input.linksubmit[value=\"▸ Input Level\"]").click()
+driver.find_element_by_css_selector('input[value="{}"]'.format("Intermediate")).click()
+# Click on Time Period and Select Baseline
+driver.find_element_by_css_selector("input.linksubmit[value=\"▸ Time Period\"]").click()
+driver.find_element_by_css_selector("input.linksubmit[value=\"1961-1990\"]").click()
+# Click on Geographic Areas Link
+driver.find_element_by_css_selector("input.linksubmit[value=\"▸ Geographic Areas\"]").click()
+
+# data_check = driver.find_element_by_xpath("//span[contains(text(),'No data')]")
+# if data_check.is_displayed():
+#    driver.close()
+#    continue
+
+try:
+    data_check = driver.find_element_by_xpath("//span[contains(text(),'No data')]")
+except NoSuchElementException:
+    print("No element found")
+
+if not True:
+    try:
+        driver.find_element_by_xpath("//span[contains(text(),'No data')]")
+        driver.find_element_by_name('_targetfieldmain=main_py&_passChanged=true&_eventtype').click()
+        print("No data")
+    except NoSuchElementException:
+        print("...")
+else:
+    driver.find_element_by_css_selector("input.linksubmit[value=\"▸ Crop\"]").click()
+    print("Yes data")
+
 
 AgroEcological_Suitability_and_Productivity_List = ["Crop suitability index (value)",
                                                     "Total production capacity (t/ha)",
@@ -104,19 +149,12 @@ for i in to_loop:
     driver.find_element_by_css_selector('input[value="{}"]'.format(i[3])).click()
     Input_Level = i[3]
 
-    # Wait 1 second
-    #time.sleep(1)
-    # If statement to skip to next loop
-    # data_check = driver.find_elements_by_xpath("//span[contains(text(),'Cannot produce results.')]")
-    #if not data_check.is_displayed():
-    #    driver.close()
-    #    continue
-
     # Click on Time Period and Select Baseline
     driver.find_element_by_css_selector("input.linksubmit[value=\"▸ Time Period\"]").click()
     driver.find_element_by_css_selector("input.linksubmit[value=\"1961-1990\"]").click()
     # Click on Geographic Areas Link
     driver.find_element_by_css_selector("input.linksubmit[value=\"▸ Geographic Areas\"]").click()
+
     # Unselect all countries
     driver.find_element_by_xpath('//*[@id="fieldareaList__pln-1"]').click()
     # Close tab for Northern Africa
@@ -162,3 +200,6 @@ for i in to_loop:
         print("Error: %s file not found" % delete_data_file)
 
     driver.close()
+
+
+
