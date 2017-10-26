@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d5c290b-836d-4197-b3f5-0e66a14b3b3c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Download/grid-m1b566d31a87cba1379e113bb93fdb61d5be5b128 (1).zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Download/grid-m1b566d31a87cba1379e113bb93fdb61d5be5b128 (2).zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Download/grid-m1b566d31a87cba1379e113bb93fdb61d5be5b128.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Download/grid-mc1419f9dbe408e26e026ba9b12fbb84827244d33.zip" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -286,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506970573159</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Included files that performs automated ETL processes of future climate scenarios and current measures of actual yield">
+      <created>1509045202000</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1509045202001</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -328,7 +331,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated ETL Process for Country-wide data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ETL Process for Country-wide data" />
+    <MESSAGE value="Included files that performs automated ETL processes of future climate scenarios and current measures of actual yield" />
+    <option name="LAST_COMMIT_MESSAGE" value="Included files that performs automated ETL processes of future climate scenarios and current measures of actual yield" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
