@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d5c290b-836d-4197-b3f5-0e66a14b3b3c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Country_Wide_Actual_Yield_and_Production.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Country_Wide_Data_Scenarios.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +18,7 @@
       <file leaf-file-name="Automated_Interactive_ETL.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Automated_Interactive_ETL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2925">
+            <state relative-caret-position="0">
               <caret line="121" column="18" lean-forward="false" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -25,35 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Automated_Interactive_ETL_Country-Wide_Data.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Automated_Interactive_ETL_Country-Wide_Data.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Automated_Interactive_ETL_Country-Wide_Data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
               <caret line="189" column="72" lean-forward="false" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Country_Wide_Actual_Yield_and_Production.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Country_Wide_Actual_Yield_and_Production.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Country_Wide_Data_Scenarios.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Country_Wide_Data_Scenarios.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -289,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509045202001</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Included files that performs automated ETL processes of future climate scenarios and current measures of actual yield">
+      <created>1509045307623</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1509045307623</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -502,7 +487,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Automated_Interactive_ETL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2925">
+        <state relative-caret-position="0">
           <caret line="121" column="18" lean-forward="false" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -525,13 +510,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Automated_Interactive_ETL_Country-Wide_Data.py">
+    <entry file="file://$PROJECT_DIR$/Country_Wide_Actual_Yield_and_Production.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="189" column="72" lean-forward="false" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="125">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -539,16 +522,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Country_Wide_Actual_Yield_and_Production.py">
+    <entry file="file://$PROJECT_DIR$/Automated_Interactive_ETL_Country-Wide_Data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        <state relative-caret-position="250">
+          <caret line="189" column="72" lean-forward="false" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
