@@ -11,9 +11,9 @@ link = 'http://www.gaez.iiasa.ac.at/w/ctrl?_flow=Vwr&_view=Welcome&idAS=0&idFS=0
 ## Access Chrome Driver to use selenium
 # Define Download Directory
 chrome_options = webdriver.ChromeOptions()
-prefs = {'download.default_directory' : 'C:/Users/dpad.intern3/Desktop/Projects/Data_Aggregation_(FAO)/Download'}
+prefs = {'download.default_directory' : 'C:/Users/.../Desktop/Projects/Data_Aggregation_(FAO)/Download'}
 chrome_options.add_experimental_option('prefs', prefs)
-driver = webdriver.Chrome(executable_path='C:/Users/Dpad.Intern3/Desktop/Projects/Data_Aggregation_(FAO)/Chrome-Driver/chromedriver.exe',
+driver = webdriver.Chrome(executable_path='C:/Users/.../Desktop/Projects/Data_Aggregation_(FAO)/Chrome-Driver/chromedriver.exe',
                           chrome_options=chrome_options)
 driver.get(link)
 
@@ -99,14 +99,6 @@ to_loop = itertools.product(AgroEcological_Suitability_and_Productivity_List, Cr
 
 # Function that downloads all data from a country
 for i in to_loop:
-    ## Access Chrome Driver to use selenium
-    # Define Download Directory
-    # chrome_options = webdriver.ChromeOptions()
-    # prefs = {'download.default_directory': 'C:/Users/dpad.intern3/Desktop/Projects/Data_Aggregation_(FAO)/Download'}
-    # chrome_options.add_experimental_option('prefs', prefs)
-    # driver = webdriver.Chrome(
-    #     executable_path='C:/Users/Dpad.Intern3/Desktop/Projects/Data_Aggregation_(FAO)/Chrome-Driver/chromedriver.exe',
-    #    chrome_options=chrome_options)
     driver.get(link)
 
     # Enter username and password
@@ -172,8 +164,8 @@ for i in to_loop:
     # Wait 1 second
     time.sleep(1)
     # Download blah blah
-    path = 'C:/Users/dpad.intern3/Desktop/Projects/Data_Aggregation_(FAO)/Download'
-    destination_folder = 'C:/Users/dpad.intern3/Desktop/Projects/Data_Aggregation_(FAO)/CSV_Files'
+    path = 'C:/Users/.../Desktop/Projects/Data_Aggregation_(FAO)/Download'
+    destination_folder = 'C:/Users/.../Desktop/Projects/Data_Aggregation_(FAO)/CSV_Files'
     # Wait 1 second
     time.sleep(1)
     file_list = [os.path.join(path, f) for f in os.listdir(path)]
@@ -193,7 +185,7 @@ for i in to_loop:
     df.to_csv(os.path.join(destination_folder, '{}.csv'.format(newfilename)))
 
     # Delete downloaded data.asc file
-    delete_data_file = "C:/Users/dpad.intern3/Desktop/Projects/Data_Aggregation_(FAO)/CSV_Files/data.asc"
+    delete_data_file = "C:/Users/.../Desktop/Projects/Data_Aggregation_(FAO)/CSV_Files/data.asc"
     # if file exists, delete it
     if os.path.isfile(delete_data_file):
         os.remove(delete_data_file)
