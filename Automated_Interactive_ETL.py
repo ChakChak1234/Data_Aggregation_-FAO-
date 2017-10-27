@@ -10,9 +10,9 @@ link = 'http://www.gaez.iiasa.ac.at/w/ctrl?_flow=Vwr&_view=Welcome&idAS=0&idFS=0
 ## Access Chrome Driver to use selenium
 # Define Download Directory
 chrome_options = webdriver.ChromeOptions()
-prefs = {'download.default_directory' : 'C:/Users/dpad.intern3/Desktop/Projects/Data_Aggregation_(FAO)/Download'}
+prefs = {'download.default_directory' : 'C:/Users/.../Desktop/Projects/Data_Aggregation_(FAO)/Download'}
 chrome_options.add_experimental_option('prefs', prefs)
-driver = webdriver.Chrome(executable_path='C:/Users/Dpad.Intern3/Desktop/Projects/Data_Aggregation_(FAO)/Chrome-Driver/chromedriver.exe',
+driver = webdriver.Chrome(executable_path='C:/Users/.../Desktop/Projects/Data_Aggregation_(FAO)/Chrome-Driver/chromedriver.exe',
                           chrome_options=chrome_options)
 driver.get(link)
 
@@ -100,8 +100,8 @@ driver.find_element_by_xpath('//*[@id="buttons"]/a[4]/img').click()
 time.sleep(2)
 
 # Download blah blah
-path = 'C:/Users/dpad.intern3/Desktop/Projects/Data_Aggregation_(FAO)/Download'
-destination_folder = 'C:/Users/dpad.intern3/Desktop/Projects/Data_Aggregation_(FAO)/CSV_Files'
+path = 'C:/Users/.../Desktop/Projects/Data_Aggregation_(FAO)/Download'
+destination_folder = 'C:/Users/.../Desktop/Projects/Data_Aggregation_(FAO)/CSV_Files'
 file_list = [os.path.join(path, f) for f in os.listdir(path)]
 time_sorted_list = sorted(file_list, key=os.path.getmtime)
 file_name = time_sorted_list[-1]
@@ -115,7 +115,7 @@ df = pd.read_table(os.path.join(destination_folder, 'data.asc'), sep="\s+", skip
 df.to_csv(os.path.join(destination_folder, '{}.csv'.format(newfilename)))
 
 # Delete downloaded data.asc file
-delete_data_file = "C:/Users/dpad.intern3/Desktop/Projects/Data_Aggregation_(FAO)/CSV_Files/data.asc"
+delete_data_file = "C:/Users/.../Desktop/Projects/Data_Aggregation_(FAO)/CSV_Files/data.asc"
 # if file exists, delete it
 if os.path.isfile(delete_data_file):
     os.remove(delete_data_file)
